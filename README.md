@@ -1,7 +1,8 @@
 # Legume Nodule Detection
 
-Automated detection and quantification of legume root nodules from hyperspectral-enhanced images using **YOLOv11**.
-Preprint: `https://www.biorxiv.org/content/10.1101/2025.07.25.666867v3` 
+Automated detection and quantification of legume root nodules from hyperspectral-enhanced images using **YOLOv11** (Jocher and Qiu, 2024).
+
+Preprint available at: `https://www.biorxiv.org/content/10.1101/2025.07.25.666867v3` 
 
 ## Overview
 
@@ -9,9 +10,9 @@ This repository contains the image-processing and deep learning workflow used to
 
 The workflow includes:
 
-1. **Hyperspectral image preprocessing** – extraction of selected wavelengths and generation of enhanced images.
+1. **Hyperspectral image preprocessing** – extraction of selected wavelengths from hyperspectral images to generate enhanced images.
 2. **Image tiling** – optional step to increase the number of training images.
-3. **YOLOv11 training** – training of models using both enhanced and RGB images.
+3. **YOLOv11 training** – training separate models for enhanced or RGB images.
 4. **Nodule prediction** – automated detection and quantification of nodules using trained models.
 
 ## Repository Structure
@@ -24,10 +25,11 @@ The workflow includes:
 ├── yolo/
 │   ├── train_enhanced.ipynb
 │   ├── train_rgb.ipynb
-│   ├── predict_enhanced.ipynb
-│   └── models/
-│       ├── enhanced/
-│       └── rgb/
+│   └── predict_enhanced.ipynb
+│
+├── models/
+│   ├── enhanced/
+│   └── rgb/
 │
 ├── README.md
 └── LICENSE
@@ -35,13 +37,21 @@ The workflow includes:
 
 ## Getting Started
 
-The preprocessing workflow can be run using `preprocessing/hyperspectral_preprocessing.ipynb`. The notebook uses hyperspectral `.bil`/`.hdr` files to generate enhanced images for nodule detection.
+The preprocessing workflow can be run using `preprocessing/hyperspectral_preprocessing.ipynb`. The notebook uses hyperspectral `.bil` files to generate enhanced images for nodule detection.
 YOLOv11 training and prediction workflows are provided in the `yolo/` directory. Pre-trained model weights and configuration files are provided where applicable.
 
-## Data
-
-A small set of example RGB and hyperspectral images is provided for testing the preprocessing workflow. Full datasets are not included in this repository.
+## Note
+As an alternative and complementary approach, a publicly accessible model for legume nodule detection is also available on the Biodock AI platform:
+Legume nodule detection – Biodock Public Models
+The Biodock platform provides an accessible, no-code approach for applying the nodule detection model to new images.
 
 ## License
 
 This project is distributed under the [MIT License](LICENSE).
+
+## Resources
+
+This pipeline has been developed using guidance from the following resources:
+Jocher G, Qiu J (2024) Ultralytics YOLO11. 
+Skalski P (2019) Make Sense. 
+
