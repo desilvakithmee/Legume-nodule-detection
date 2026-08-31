@@ -20,16 +20,18 @@ The workflow includes:
 ```text
 ├── preprocessing/
 │   ├── hyperspectral_preprocessing.ipynb
-│   └── tile.py
+│   └── tile_images.py
 │   
 ├── yolo/
-│   ├── train_enhanced.ipynb
-│   ├── train_rgb.ipynb
-│   └── predict_enhanced.ipynb
+│   ├── train_enhancedTiledModel.py
+│   ├── train_RGBTiledModel.py
+│   ├── predict_enhanced.py
+│   ├── predict_RGB.py
+│   └── estimate_nodule_area.R
 │
 ├── models/
-│   ├── enhanced/
-│   └── rgb/
+│   ├── enhanced_tiled_yolov11/
+│   └── RGB_tiled_yolov11/
 │
 ├── README.md
 └── LICENSE
@@ -52,6 +54,6 @@ This project is distributed under the [MIT License](LICENSE).
 ## Resources
 
 This pipeline has been developed using guidance from the following resources:  
-Jocher G, Qiu J (2024) Ultralytics YOLO11.   
-Skalski P (2019) Make Sense. 
+1. Jocher G, Qiu J (2024) Ultralytics YOLO11.   
+2. Skalski P (2019) Make Sense. 
 
