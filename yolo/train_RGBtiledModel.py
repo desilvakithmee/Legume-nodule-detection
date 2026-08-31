@@ -14,7 +14,7 @@ if torch.cuda.is_available():
 # EDIT THESE PATHS (Linux)
 # -----------------------------
 # Example:
-DATA_YAML = "/home/labs/brooks_lab/Hyperspectral/datasets/combinedRGBNodulesTiled/combinedRGBNodulesTiled.yaml"
+DATA_YAML = "datasets/combinedRGBNodulesTiled/combinedRGBNodulesTiled.yaml"
 
 # Where to store runs/ outputs (relative or absolute)
 PROJECT = "runs"
