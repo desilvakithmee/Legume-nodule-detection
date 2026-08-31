@@ -5,7 +5,7 @@ from ultralytics import YOLO
 model = YOLO("./runs/combined.new_tiled_yolo11/weights/best.pt") #change model path as needed
 
 sources = [
-    "/home/labs/brooks_lab/Hyperspectral/datasets/NdfaPredictionSet/images/S93_Enhanced",
+    "images/S93_Enhanced",
 ]
 
 for src in sources:
