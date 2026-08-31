@@ -15,7 +15,7 @@ if torch.cuda.is_available():
 # -----------------------------
 # Example:
 # DATA_YAML = "/home/<netid>/NoduleYoloWorkspace/datasets/Indeterminate_Enhanced_Model/dataset.yaml"
-DATA_YAML = "/home/labs/brooks_lab/Hyperspectral/datasets/combinedNodulesTiled/combinedNodulesTiled.yaml"
+DATA_YAML = "datasets/enhancedTiled/combinedNodulesTiled.yaml"
 
 # Where to store runs/ outputs (relative or absolute)
 PROJECT = "runs"
